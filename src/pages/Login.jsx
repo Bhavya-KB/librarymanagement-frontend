@@ -1,5 +1,4 @@
-import React from 'react'
-// import AdminHeader from '../components/AdminHeader'
+import React, { useState } from 'react'
 import {
   Box,
   TextField,
@@ -12,10 +11,49 @@ import {
 import GoogleIcon from "@mui/icons-material/Google";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import CloseIcon from "@mui/icons-material/Close";
+import { useNavigate } from 'react-router-dom';
+import commonAPI from '../service/commonAPI';
+import BASEURL from '../service/serverURL';
 
 function Login() {
+
+      const navigate = useNavigate();
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleLogin = async () => {
+    if (!email || !password) {
+      alert("Please enter both email and password!");
+      return;
+    }
+
+    try {
+      const response = await commonAPI("GET", `${BASEURL}/users`);
+      const users = response.data;
+
+      const loggedUser = users.find(
+        (user) => user.email === email && user.password === password
+      );
+
+      if (loggedUser) {
+        if (loggedUser.role === "admin") {
+          navigate("/adminhome");
+        } else {
+          navigate("/userhome");
+        }
+      } else {
+        alert("Invalid email or password!");
+      }
+    } catch (error) {
+      console.error("Login error:", error);
+      alert("Something went wrong. Please try again.");
+    }
+  };
+
+
   return (
-//   <AdminHeader/>
+
 
 <>
   <Box
@@ -64,6 +102,11 @@ function Login() {
           InputProps={{
             style: { color: "white", borderColor: "white" },
           }}
+
+           value={email}
+          onChange={(e) => setEmail(e.target.value)}
+    
+         
         />
 
         {/* Password */}
@@ -77,6 +120,9 @@ function Login() {
           InputProps={{
             style: { color: "white", borderColor: "white" },
           }}
+
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
         />
 
         <Typography
@@ -95,6 +141,8 @@ function Login() {
                                     backgroundColor: '#7a2a06',fontWeight:"bold", borderRadius: "8px",
                                     
                                 }}
+
+                                  onClick={handleLogin}
 
         >
           Log In
