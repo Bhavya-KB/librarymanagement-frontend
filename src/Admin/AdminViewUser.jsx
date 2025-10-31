@@ -1,10 +1,12 @@
 import React from 'react'
 import { Button, Card, CardContent, Typography } from '@mui/material';
+import AdminHeader from '../components/AdminHeader';
 
 
 function AdminViewUser() {
     return (
         <>
+         <AdminHeader/>
             <div style={{ backgroundColor: 'rgba(242, 227, 166, 0.8)', minHeight: '100vh', padding: '40px 0' }}>
                 <div className="container">
                     <div className="row ">
