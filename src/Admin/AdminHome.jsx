@@ -5,8 +5,11 @@ import SchoolIcon from "@mui/icons-material/School";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
 import GroupIcon from "@mui/icons-material/Group";
 import ComputerIcon from "@mui/icons-material/Computer";
+import { useNavigate } from 'react-router-dom';
 
 function AdminHome() {
+
+   const navigate = useNavigate();
   return (
     <>
      <AdminHeader/>
@@ -67,19 +70,18 @@ function AdminHome() {
                 >
                   Explore Top Books
                 </Button>
-                <Button
-                 
-
-                   
+               
+               
+                <Button         
           color="primary"
-        
-        //   sx={{ borderRadius: "8px", fontWeight: "bold" }}
          variant="outlined"
                   sx={{
                     borderColor: "#fff",
                     color: "#fff",
                     "&:hover": { backgroundColor: "rgba(255,255,255,0.2)" },
                   }}
+
+                  onClick={() => navigate("/adduser")}
                 
                 >
                   Add Users Details

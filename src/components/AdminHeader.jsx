@@ -6,8 +6,11 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
+import { useNavigate } from 'react-router-dom';
 
 function AdminHeader() {
+
+    const navigate = useNavigate();
   return (
    <AppBar position="static" sx={{ backgroundColor: '#88332ace' }}>
       <Toolbar>
@@ -24,10 +27,10 @@ function AdminHeader() {
 
         {/* Right side - Navigation buttons */}
         <Box>
-          <Button color="inherit">Add Books</Button>
-          <Button color="inherit">Add Users</Button>
-          <Button color="inherit">View Users</Button>
-          <Button color="error" variant="contained" sx={{ ml: 1 }}>
+          <Button onClick={() => navigate("/adminaddbook")} color="inherit">Add Books</Button>
+          <Button onClick={() => navigate("/adduser")} color="inherit">Add Users</Button>
+          <Button onClick={() => navigate("/adminview")} color="inherit">View Users</Button>
+          <Button onClick={() => navigate("/")} color="error" variant="contained" sx={{ ml: 1 }}>
             Logout
           </Button>
         </Box>
