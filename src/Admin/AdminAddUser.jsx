@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import AdminHeader from '../components/AdminHeader'
 import { addUserAPI } from '../service/allAPI'
 import Swal from 'sweetalert2'
+import { useNavigate } from 'react-router-dom'
 
 function AdminAddUser() {
 
@@ -15,9 +16,11 @@ function AdminAddUser() {
     returnDate: ""
   })
 
+  const navigate = useNavigate()
+
   // Add user handler
   const adduser = async (e) => {
-    e.preventDefault(); // ✅ stop form from reloading
+    e.preventDefault(); 
 
     const { userId, userName, bookName, bookNumber, takenDate, returnDate } = userInput;
 
@@ -33,7 +36,7 @@ function AdminAddUser() {
           icon: "success"
         });
 
-        // Reset form after success
+      
         setUserInput({
           userId: "",
           userName: "",
@@ -42,6 +45,10 @@ function AdminAddUser() {
           takenDate: "",
           returnDate: ""
         });
+        
+      setTimeout(() => {
+        navigate('/adminview');
+      }, 1500);
 
       } catch (err) {
         console.error(err);
@@ -96,7 +103,7 @@ function AdminAddUser() {
             Add User Details
           </Typography>
 
-          {/* ✅ Removed "component=form" to prevent page reload */}
+         
           <Box noValidate autoComplete="off">
             <TextField
               label="User ID"
