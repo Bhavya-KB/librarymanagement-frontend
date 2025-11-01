@@ -1,6 +1,8 @@
 import React from 'react'
 import { Button, Card, CardContent, Typography,Box,TextField } from '@mui/material';
 import Modal from '@mui/material/Modal';
+import AdminHeader from '../components/AdminHeader';
+
 
 
 
@@ -26,6 +28,7 @@ function AdminViewUser() {
 
     return (
         <>
+         <AdminHeader/>
             <div style={{ backgroundColor: 'rgba(242, 227, 166, 0.8)', minHeight: '100vh', padding: '40px 0' }}>
                 <h1 className='font-bold  text-center' >
                                         User Details

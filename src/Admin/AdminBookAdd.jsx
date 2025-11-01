@@ -1,10 +1,12 @@
 import React from 'react'
 import { Box, TextField, Button, Typography, Rating } from '@mui/material';
+import AdminHeader from '../components/AdminHeader';
 
 
 function AdminBookAdd() {
   return (
     <>
+    <AdminHeader/>
     <Box sx={{ backgroundImage: 'url(https://www.shutterstock.com/image-photo/book-open-pages-close-up-600nw-2562942291.jpg)', width: '100%', height: '900px', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center', position: 'relative' }}>
 
 
