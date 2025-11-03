@@ -7,6 +7,7 @@ import AdminHome from './Admin/AdminHome'
 import AdminAddUser from './Admin/AdminAddUser'
 import AdminViewUser from './Admin/AdminViewUser'
 import AdminBookAdd from './Admin/AdminBookAdd'
+import PageNotFound from './pages/PageNotFound'
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path='/adminview' element={<AdminViewUser />} />
 
       <Route path='/adminaddbook' element={<AdminBookAdd/>}/>
+      <Route path='/*' element={<PageNotFound/>}/>
 
       </Routes>
     </>
