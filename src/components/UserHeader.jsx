@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -37,7 +37,11 @@ export default function UserHeader({
     handleCloseNavMenu();
   };
 
+
+  const navigate = useNavigate();
+
   return (
+
     <AppBar position="sticky" elevation={4} sx={{ bgcolor: "#2A6C88" }}>
       <Container maxWidth="xl">
         <Toolbar
@@ -125,9 +129,11 @@ export default function UserHeader({
             </Button>
 
             <Button
-              onClick={handleLogout}
+              // onClick={handleLogout}
               startIcon={<LogoutIcon />}
               variant="contained"
+
+              onClick={() => navigate("/")}
               sx={{
                 textTransform: "none",
                 fontWeight: 700,

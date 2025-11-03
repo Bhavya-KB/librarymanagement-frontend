@@ -3,6 +3,7 @@ import { Button, Card, CardContent, Typography, Box, TextField, Modal } from '@m
 import Swal from 'sweetalert2';
 import AdminHeader from '../components/AdminHeader';
 import { getAllUsersAPI, updateUserAPI, deleteUserAPI } from '../service/allAPI';
+import AdminFooter from '../components/AdminFooter';
 
 const AdminViewUser = () => {
   const [users, setUsers] = useState([]);
@@ -65,8 +66,8 @@ const AdminViewUser = () => {
   return (
     <>
       <AdminHeader />
-      <div style={{ backgroundColor: 'rgba(242, 227, 166, 0.8)', minHeight: '100vh', padding: '40px 0' }}>
-        <h1 className='font-bold text-center'>User Details</h1>
+      <div style={{ backgroundColor: 'rgba(242, 227, 166, 0.8)',  color: "#5e1111ff", minHeight: '100vh', padding: '40px 0' }}>
+        <h1 className='font-bold text-center ' >User Details</h1>
 
         <div className="container">
           <div className="row">
@@ -128,7 +129,7 @@ const AdminViewUser = () => {
             left: '50%',
             transform: 'translate(-50%, -50%)',
           }}>
-            <Typography variant="h5" gutterBottom align="center" fontWeight="bold" sx={{ color: '#4a2f04' }}>
+            <Typography variant="h5" gutterBottom align="center" fontWeight="bold" sx={{  color: "#5e1111ff" }}>
               Update User Details
             </Typography>
 
@@ -162,6 +163,7 @@ const AdminViewUser = () => {
           </Box>
         </Modal>
       </div>
+      <AdminFooter/>
     </>
   );
 };

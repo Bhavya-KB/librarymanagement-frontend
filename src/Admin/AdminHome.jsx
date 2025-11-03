@@ -6,6 +6,7 @@ import MenuBookIcon from "@mui/icons-material/MenuBook";
 import GroupIcon from "@mui/icons-material/Group";
 import ComputerIcon from "@mui/icons-material/Computer";
 import { useNavigate } from 'react-router-dom';
+import AdminFooter from '../components/AdminFooter';
 
 function AdminHome() {
 
@@ -376,6 +377,8 @@ function AdminHome() {
     </Grid>
   </Grid>
 </Box>
+
+<AdminFooter/>
     
     </>
     

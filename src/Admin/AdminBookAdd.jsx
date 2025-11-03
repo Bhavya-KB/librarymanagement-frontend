@@ -119,6 +119,7 @@ import AdminHeader from "../components/AdminHeader";
 import {addBookAPI} from '../service/allAPI'
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
+import AdminFooter from "../components/AdminFooter";
 
 function AdminBookAdd() {
 
@@ -276,6 +277,8 @@ function AdminBookAdd() {
           </Box>
         </Box>
       </Box>
+
+      <AdminFooter/>
     </>
   );
 }

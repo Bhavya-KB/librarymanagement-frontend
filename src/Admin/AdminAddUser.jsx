@@ -4,6 +4,7 @@ import AdminHeader from '../components/AdminHeader'
 import { addUserAPI } from '../service/allAPI'
 import Swal from 'sweetalert2'
 import { useNavigate } from 'react-router-dom'
+import AdminFooter from '../components/AdminFooter'
 
 function AdminAddUser() {
 
@@ -98,7 +99,7 @@ function AdminAddUser() {
             gutterBottom
             align="center"
             fontWeight="bold"
-            sx={{ color: '#4a2f04' }}
+            sx={{ color: "#5e1111ff" }}
           >
             Add User Details
           </Typography>
@@ -198,6 +199,7 @@ function AdminAddUser() {
           </Box>
         </Box>
       </Box>
+      <AdminFooter/>
     </>
   )
 }
