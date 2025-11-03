@@ -35,7 +35,7 @@ export default function UserHomePage() {
           {/* Welcome Section */}
           <Box
             sx={{
-              bgcolor:" #DCEAF1"
+              bgcolor:" #ead0d088"
 ,
               py: { xs: 6, md: 12 },
               textAlign: 'center',
@@ -67,7 +67,7 @@ export default function UserHomePage() {
           </Box>
     
           {/* About Section */}
-         <Container id="about-section" maxWidth="md" sx={{ mt: -6, bgcolor: '#2A6C88', py: 6, borderRadius: 3 }}>
+         <Container id="about-section" maxWidth="md" sx={{ mt: -6, bgcolor: '#c96565ff', py: 6, borderRadius: 3 }}>
       <Card elevation={6} sx={{ borderRadius: 3, overflow: 'visible', bgcolor: 'white' }}>
               <CardContent>
                 <Grid container spacing={3} alignItems="center">
