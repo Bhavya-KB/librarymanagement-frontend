@@ -38,7 +38,7 @@ export default function UserHeader({
   };
 
   return (
-    <AppBar position="sticky" elevation={4} sx={{ bgcolor: "#2A6C88" }}>
+    <AppBar position="sticky" elevation={4} sx={{ bgcolor: "#c96565ff" }}>
       <Container maxWidth="xl">
         <Toolbar
           disableGutters
@@ -93,9 +93,9 @@ export default function UserHeader({
             <Button
               onClick={() => handleScrollTo("about-section")}
               sx={{
-                color: "#C2A67E",
+                color: "rgba(243, 238, 237, 1)",
                 textTransform: "none",
-                "&:hover": { color: "#fff", backgroundColor: "rgba(255,215,0,0.2)" },
+                // "&:hover": { color: "#fff", backgroundColor: "rgba(255,215,0,0.2)" },
               }}
             >
               <InfoIcon fontSize="small" sx={{ mr: 1 }} /> About
@@ -104,9 +104,9 @@ export default function UserHeader({
             <Button
               onClick={() => handleScrollTo("book-section")}
               sx={{
-                color: "#C2A67E",
+                color: "rgba(243, 238, 237, 1)",
                 textTransform: "none",
-                "&:hover": { color: "#fff", backgroundColor: "rgba(255,215,0,0.2)" },
+                // "&:hover": { color: "#fff", backgroundColor: "rgba(255,215,0,0.2)" },
               }}
             >
               <MenuBookIcon fontSize="small" sx={{ mr: 1 }} /> Books
@@ -116,9 +116,9 @@ export default function UserHeader({
               component={Link}
               to="/userbookdetails"
               sx={{
-                color: "#C2A67E",
+                color: "rgba(243, 238, 237, 1)",
                 textTransform: "none",
-                "&:hover": { color: "#fff", backgroundColor: "rgba(255,215,0,0.2)" },
+                // "&:hover": { color: "#fff", backgroundColor: "rgba(255,215,0,0.2)" },
               }}
             >
               <PersonIcon fontSize="small" sx={{ mr: 1 }} /> User Details
@@ -131,9 +131,9 @@ export default function UserHeader({
               sx={{
                 textTransform: "none",
                 fontWeight: 700,
-                bgcolor: "#fff",
-                color: "#C2A67E",
-                "&:hover": { bgcolor: "#e0e0e0" },
+                bgcolor: "rgba(243, 238, 237, 1)",
+                color: "#dcbc8fff",
+                // "&:hover": { bgcolor: "#e0e0e0" },
               }}
             >
               Logout

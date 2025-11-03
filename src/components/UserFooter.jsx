@@ -41,8 +41,8 @@ export default function UserFooter() {
         mt: 8,
         pt: { xs: 6, md: 10 },
         pb: { xs: 4, md: 6 },
-        bgcolor: "#2A6C88",
-        color: "rgba(255, 217, 0, 0.4)",
+        bgcolor: "#c96565ff",
+        color: "rgba(243, 238, 237, 1)",
         boxSizing: "border-box",
       }}
     >
@@ -87,7 +87,7 @@ export default function UserFooter() {
                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 1 }}>
                   Library Hub
                 </Typography>
-                <Typography variant="body2" sx={{ color: "rgba(255, 217, 0, 0.4)" }}>
+                <Typography variant="body2" sx={{ color: "rgba(243, 238, 237, 1)" }}>
                   A compact, elegant library management system for small libraries.
                   Discover books, manage loans, and keep your collection organised — all with a clean, friendly interface.
                 </Typography>
@@ -164,15 +164,15 @@ export default function UserFooter() {
             </Typography>
 
             <Stack direction={{ xs: "column", sm: "row" }} spacing={1} component="form" onSubmit={(e) => e.preventDefault()}>
-              <TextField placeholder="Your email" size="small" sx={{ bgcolor: "rgba(255,255,255,0.06)", borderRadius: 1, input: { color: "#2A6C88" }, "& .MuiOutlinedInput-notchedOutline": { border: "none" }, minWidth: 0, flex: 1 }} InputProps={{ sx: { color: "inherit" } }} />
-              <Button type="submit" variant="contained" sx={{ whiteSpace: "nowrap" }}>Contact</Button>
+              <TextField placeholder="Your email" size="small" sx={{ bgcolor: "rgba(251, 241, 241, 0.36)", borderRadius: 1, input: { color: "#ecf1f4ff" }, "& .MuiOutlinedInput-notchedOutline": { border: "none" }, minWidth: 0, flex: 1 }} InputProps={{ sx: { color: "inherit" } }} />
+              <Button type="submit" variant="contained" sx={{ whiteSpace: "nowrap",backgroundColor:"#f43636" }}>Contact</Button>
             </Stack>
           </Box>
         </Box>
 
         {/* bottom bar */}
         <Box sx={{ borderTop: "1px solid rgba(255,255,255,0.08)", mt: 4, pt: 3, display: "flex", flexDirection: { xs: "column", sm: "row" }, justifyContent: "space-between", alignItems: "center", gap: 2 }}>
-          <Typography variant="caption" sx={{ color: "rgba(255, 217, 0, 0.4)" }}>
+          <Typography variant="caption" sx={{ color: "rgba(243, 238, 237, 1)" }}>
             © {new Date().getFullYear()} Library Hub — Small library management made beautiful.
           </Typography>
 

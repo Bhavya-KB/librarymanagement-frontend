@@ -43,7 +43,7 @@ const borrowedBooks = [
 export default function UserBookDetails() {
   return (
    <>
-  {/* <UserHeader/>  */}
+  <UserHeader/> 
         <Box
           sx={{
             minHeight: "100vh",
@@ -90,7 +90,7 @@ export default function UserBookDetails() {
                 gap: 2,
               }}
             >
-              <Avatar sx={{ bgcolor: "primary.main", width: 64, height: 64 }}>
+              <Avatar sx={{ bgcolor: "#c96565ff", width: 64, height: 64 }}>
                 <LibraryBooksIcon fontSize="large" />
               </Avatar>
               <Box>

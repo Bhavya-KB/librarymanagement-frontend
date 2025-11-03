@@ -40,7 +40,7 @@ function Login() {
         if (loggedUser.role === "admin") {
           navigate("/adminhome");
         } else {
-          navigate("/adduser");
+          navigate("/userhome");
         }
       } else {
         alert("Invalid email or password!");
