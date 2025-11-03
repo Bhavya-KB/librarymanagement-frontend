@@ -26,7 +26,7 @@ export const deleteUserAPI = async (id) => {
     return await commonAPI("DELETE", `${BASEURL}/admin/${id}`, {})
 }
 
-// Add Book API
+// Add Books 
 export const addBookAPI = async (reqBody) => {
   return await commonAPI("POST", `${BASEURL}/books`, reqBody)
 }
