@@ -110,7 +110,12 @@ const AdminViewUser = () => {
                 </div>
               ))
             ) : (
-              <Typography align="center" sx={{ mt: 4 }}>No users found!</Typography>
+              // <Typography align="center" sx={{ mt: 4 }}>No users found!</Typography>
+             <div className='flex justify-center items-center  flex-col my-10'>
+              <img className='w-100 h-50' src='https://www.allfixhome.com/_next/image?url=%2Fnot-found.gif&w=256&q=75'/>
+            {/* <p className='font-bold my-10 text-5xl text-center'>No users found!</p> */}
+             </div>
+          
             )}
           </div>
         </div>
