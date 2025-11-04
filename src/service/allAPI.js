@@ -30,3 +30,10 @@ export const deleteUserAPI = async (id) => {
 export const addBookAPI = async (reqBody) => {
   return await commonAPI("POST", `${BASEURL}/books`, reqBody)
 }
+
+// Get all books API
+export const getAllBooksAPI = async () => {
+  return await commonAPI("GET", `${BASEURL}/books`, "");
+};
+
+

@@ -64,7 +64,7 @@ export default function UserHeader({
               color: "inherit",
             }}
           >
-            <Box
+            {/* <Box
               sx={{
                 width: 40,
                 height: 40,
@@ -75,8 +75,8 @@ export default function UserHeader({
                 alignItems: "center",
                 justifyContent: "center",
               }}
-            >
-              <img
+            > */}
+              {/* <img
                 src={logoSrc}
                 alt="logo"
                 style={{
@@ -84,10 +84,13 @@ export default function UserHeader({
                   height: "100%",
                   objectFit: "cover",
                 }}
-              />
-            </Box>
+              /> */}
+               <IconButton edge="start" color="inherit" aria-label="logo">
+                          <MenuBookIcon sx={{ fontSize: 32 }} />
+                        </IconButton>
+            {/* </Box> */}
             <Typography variant="h6" sx={{ fontWeight: 800 }}>
-              {appName}
+               Library Hub
             </Typography>
           </Box>
 
@@ -96,12 +99,12 @@ export default function UserHeader({
             <Button
               onClick={() => handleScrollTo("about-section")}
               sx={{
-                color: "rgba(243, 238, 237, 1)",
+                color: "rgba(248, 248, 248, 1)",
                 textTransform: "none",
                 // "&:hover": { color: "#fff", backgroundColor: "rgba(255,215,0,0.2)" },
               }}
             >
-              <InfoIcon fontSize="small" sx={{ mr: 1 }} /> About
+               About
             </Button>
 
             <Button
@@ -112,7 +115,7 @@ export default function UserHeader({
                 // "&:hover": { color: "#fff", backgroundColor: "rgba(255,215,0,0.2)" },
               }}
             >
-              <MenuBookIcon fontSize="small" sx={{ mr: 1 }} /> Books
+               Books
             </Button>
 
             <Button
@@ -124,7 +127,7 @@ export default function UserHeader({
                 // "&:hover": { color: "#fff", backgroundColor: "rgba(255,215,0,0.2)" },
               }}
             >
-              <PersonIcon fontSize="small" sx={{ mr: 1 }} /> User Details
+               User Details
             </Button>
 
             <Button

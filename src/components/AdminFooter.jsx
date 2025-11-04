@@ -39,7 +39,7 @@ function AdminFooter() {
     <Box
       component="footer"
       sx={{
-        width: "100%",                // full width
+        width: "100%",               
         position: "relative",
         left: 0,
         right: 0,
@@ -51,12 +51,12 @@ function AdminFooter() {
         boxSizing: "border-box",
       }}
     >
-      {/* Inner container that controls horizontal padding but not page-centering gaps */}
+     
       <Box
         sx={{
-          maxWidth: "1600px",                // control content width if you want
-          mx: "auto",                        // center content horizontally
-          px: { xs: 2, sm: 4, md: 8 },       // internal padding (no side gaps outside bg)
+          maxWidth: "1600px",               
+          mx: "auto",                       
+          px: { xs: 2, sm: 4, md: 8 },      
           boxSizing: "border-box",
         }}
       >
@@ -66,7 +66,7 @@ function AdminFooter() {
             display: "flex",
             gap: 4,
             alignItems: "flex-start",
-            flexWrap: { xs: "wrap", sm: "nowrap" }, // nowrap on larger screens
+            flexWrap: { xs: "wrap", sm: "nowrap" }, 
             pb: 2,
           }}
         >
@@ -116,18 +116,18 @@ function AdminFooter() {
           </Box>
 
           {/* Navigation */}
-          <Box sx={{ flex: "1 1 33%", minWidth: 200 }}>
+          <Box sx={{ flex: "1 7 30%", minWidth: 200 }}>
             <Typography variant="subtitle1" sx={{ fontWeight: 700, mb: 1 }}>
-              Navigation
+              Links
             </Typography>
 
             <List disablePadding>
               <ListItemButton sx={{ pl: 0 }} onClick={() => scrollToId("about-section")}>
-                <ListItemText primary={<Box component="span" sx={{ display: "flex", gap: 1, alignItems: "center" }}><InfoIcon sx={{ fontSize: 18 }} /> About</Box>} />
+                <ListItemText primary={<Box component="span" sx={{ display: "flex", gap: 1, alignItems: "center" }}> Add Books</Box>} />
               </ListItemButton>
 
               <ListItemButton sx={{ pl: 0 }} onClick={() => scrollToId("book-section")}>
-                <ListItemText primary={<Box component="span" sx={{ display: "flex", gap: 1, alignItems: "center" }}><BookIcon sx={{ fontSize: 18 }} /> Books</Box>} />
+                <ListItemText primary={<Box component="span" sx={{ display: "flex", gap: 1, alignItems: "center" }}>Add Users</Box>} />
               </ListItemButton>
 
              <ListItemButton
@@ -138,7 +138,7 @@ function AdminFooter() {
   <ListItemText
     primary={
       <Box component="span" sx={{ display: "flex", gap: 1, alignItems: "center" }}>
-        <PersonIcon sx={{ fontSize: 18 }} /> User Details
+       View Users
       </Box>
     }
 />
@@ -185,16 +185,16 @@ function AdminFooter() {
           </Typography>
 
           <Box>
-            <Link href="#" underline="none" color="inherit" sx={{ mr: 2, cursor: "pointer" }} onClick={() => scrollToId("about-section")}>About</Link>
-            <Link href="#" underline="none" color="inherit" sx={{ mr: 2, cursor: "pointer" }} onClick={() => scrollToId("book-section")}>Books</Link>
+            <Link href="#" underline="none" color="inherit" sx={{ mr: 2, cursor: "pointer" }} onClick={() => scrollToId("")}>Add Books</Link>
+            <Link href="#" underline="none" color="inherit" sx={{ mr: 2, cursor: "pointer" }} onClick={() => scrollToId("")}>Add Users</Link>
 <Link
   component={Link}
-  to="/userbookdetails"
+  to="/adminview"
   underline="none"
   color="inherit"
   sx={{ cursor: "pointer" }}
 >
-  User Details
+  View Users
 </Link>
           </Box>
         </Box>

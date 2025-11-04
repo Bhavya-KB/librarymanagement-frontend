@@ -7,6 +7,7 @@ import GroupIcon from "@mui/icons-material/Group";
 import ComputerIcon from "@mui/icons-material/Computer";
 import { useNavigate } from 'react-router-dom';
 import AdminFooter from '../components/AdminFooter';
+import BookListing from '../components/BookListing';
 
 function AdminHome() {
 
@@ -125,7 +126,7 @@ function AdminHome() {
               color: "#5e1111ff",
             }}
           >
-            LIBRARY SERVICES
+            Library Services
           </Typography>
           <Typography
             variant="body1"
@@ -257,7 +258,7 @@ function AdminHome() {
     px: { xs: 3, md: 8 },
   }}
 >
-  <Typography
+  {/* <Typography
     variant="h4"
     sx={{
       textAlign: "center",
@@ -267,114 +268,11 @@ function AdminHome() {
     }}
   >
     Featured Books
-  </Typography>
+  </Typography> */}
+  {/*  */}
 
-  <Grid container spacing={4} justifyContent="center">
-    {/* Book 1 */}
-    <Grid item xs={12} sm={6} md={4}>
-      <Box
-        sx={{
-          backgroundColor: "#fff",
-          borderRadius: "16px",
-          boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
-          textAlign: "center",
-          p: 3,
-          
-          transition: "transform 0.3s",
-          "&:hover": { transform: "translateY(-8px)" },
-        }}
-      >
-        <Box
-          component="img"
-          src="https://images-fe.ssl-images-amazon.com/images/I/716l34WGkXL._AC_UL210_SR210,210_.jpg"
-          alt="The Secret Life of Mitty"
-          sx={{
-            width: "70%",
-            height:"180px",
-            borderRadius: "8px",
-            mb: 2,
-            mx: "auto",
-          }}
-        />
-        <Typography variant="h6" sx={{ fontWeight: 600 }}>
-          The Secret Life of Mitty
-        </Typography>
-        <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
-          by James Thurber
-        </Typography>
-        <Typography sx={{ color: "#ff9800" }}>⭐⭐⭐⭐☆</Typography>
-      </Box>
-    </Grid>
-
-    {/* Book 2 */}
-    <Grid item xs={12} sm={6} md={4}>
-      <Box
-        sx={{
-          backgroundColor: "#fff",
-          borderRadius: "16px",
-          boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
-          textAlign: "center",
-          p: 3,
-          transition: "transform 0.3s",
-          "&:hover": { transform: "translateY(-8px)" },
-        }}
-      >
-        <Box
-          component="img"
-          src="https://sdi3.chrislands.com/sdi/978/14/81/4/9781481447188.jpg"
-          alt="Pegasus: The End of Olympus"
-          sx={{
-            width: "60%",
-            height:"180px",
-            borderRadius: "8px",
-            mb: 2,
-            mx: "auto",
-          }}
-        />
-        <Typography variant="h6" sx={{ fontWeight: 600 }}>
-          Pegasus: The End of Olympus
-        </Typography>
-        <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
-          by Kate O’Hearn
-        </Typography>
-        <Typography sx={{ color: "#ff9800" }}>⭐⭐⭐⭐⭐</Typography>
-      </Box>
-    </Grid>
-
-    {/* Book 3 */}
-    <Grid item xs={12} sm={6} md={4}>
-      <Box
-        sx={{
-          backgroundColor: "#fff",
-          borderRadius: "16px",
-          boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
-          textAlign: "center",
-          p: 3,
-          transition: "transform 0.3s",
-          "&:hover": { transform: "translateY(-8px)" },
-        }}
-      >
-        <Box
-          component="img"
-          src="https://images-eu.ssl-images-amazon.com/images/I/81gEVkpy-uL._AC_UL210_SR210,210_.jpg"
-          alt="Magic"
-          sx={{
-            width: "110%",
-            height:"180px",
-            borderRadius: "8px",
-            mb: 2,
-            mx: "auto",
-          }}
-        />
-        <Typography variant="h6" sx={{ fontWeight: 600 }}>
-          Magic
-        </Typography>
-        <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
-          by Danielle Steel
-        </Typography>
-        <Typography sx={{ color: "#ff9800" }}>⭐⭐⭐⭐☆</Typography>
-      </Box>
-    </Grid>
+  <Grid container spacing={4} justifyContent="center" >
+   <BookListing />
   </Grid>
 </Box>
 

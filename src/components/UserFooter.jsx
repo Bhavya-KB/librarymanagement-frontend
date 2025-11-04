@@ -38,7 +38,7 @@ export default function UserFooter() {
         position: "relative",
         left: 0,
         right: 0,
-        mt: 8,
+        // mt: 1,
         pt: { xs: 6, md: 10 },
         pb: { xs: 4, md: 6 },
         bgcolor: "#c96565ff",
