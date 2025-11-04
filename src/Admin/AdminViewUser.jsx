@@ -74,8 +74,24 @@ const AdminViewUser = () => {
             {users.length > 0 ? (
               users.map((user) => (
                 <div className="col-md-4 mb-4" key={user.id}>
-                  <Card sx={{ minWidth: 275, p: 2, boxShadow: 4, borderRadius: 3, bgcolor: '#ffffff' }}>
+                  <Card sx={{ minWidth: 270,   p: 2, boxShadow: 4, borderRadius: 3, bgcolor: '#ffffff' }}>
                     <CardContent>
+                       {/* ✅ Display user image above the User ID */}
+                      {user.imgUrl && (
+                        <Box sx={{ display: 'flex', justifyContent: 'center', mb: 2 }}>
+                          <img
+                            src={user.imgUrl}
+                            alt={user.userName}
+                            style={{
+                              width: '300px',
+                              height: '290px',
+                              // borderRadius: '10%',
+                              // objectFit: 'cover',
+                              border: '3px solid #d19274ff'
+                            }}
+                          />
+                        </Box>
+                      )}
                       <table style={{ width: '100%', borderCollapse: 'collapse' }}>
                         <tbody>
                           <tr><td style={{ fontWeight: 'bold', paddingLeft: '40px' }}>User ID</td><td>{user.userId}</td></tr>
@@ -158,6 +174,10 @@ const AdminViewUser = () => {
                 <TextField label="Return Date" type="date" InputLabelProps={{ shrink: true }} fullWidth sx={{ mb: 2 }}
                   value={editUser.returnDate}
                   onChange={(e) => setEditUser({ ...editUser, returnDate: e.target.value })} />
+                  {/* ✅ Allow editing the image URL too */}
+                <TextField label="Image URL" fullWidth sx={{ mb: 2 }}
+                  value={editUser.imgUrl || ""}
+                  onChange={(e) => setEditUser({ ...editUser, imgUrl: e.target.value })} />
 
                 <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 2 }}>
                   <Button onClick={handleClose} variant="contained" sx={{ backgroundColor: '#f43636', '&:hover': { backgroundColor: '#d12f2f' } }}>Cancel</Button>

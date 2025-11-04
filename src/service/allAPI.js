@@ -1,6 +1,17 @@
 import commonAPI from "./commonAPI"
 import BASEURL from "./serverURL"
 
+
+// ✅ Add new user (register)
+export const addRegisterAPI = async (reqBody) => {
+  return await commonAPI("POST", `${BASEURL}/users`, reqBody);
+};
+
+// ✅ Get all users (login check)
+export const getAllRegisterAPI = async () => {
+  return await commonAPI("GET", `${BASEURL}/users`, "");
+};
+
 // add user
 export const addUserAPI = async (reqBody) => {
     return await commonAPI("POST", `${BASEURL}/admin`, reqBody)

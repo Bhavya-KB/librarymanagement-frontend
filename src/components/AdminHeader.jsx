@@ -21,7 +21,7 @@ function AdminHeader() {
             <MenuBookIcon sx={{ fontSize: 32 }} />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ fontWeight: 'bold' }}>
-            Library Hub
+            Libib
           </Typography>
         </Box>
 

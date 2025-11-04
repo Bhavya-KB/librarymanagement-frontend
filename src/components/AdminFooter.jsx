@@ -93,7 +93,7 @@ function AdminFooter() {
 
               <Box>
                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 1 }}>
-                  Library Hub
+                  Libib
                 </Typography>
                 <Typography variant="body2" sx={{ color: "rgba(243, 238, 237, 1)" }}>
                   A compact, elegant library management system for small libraries.
@@ -164,7 +164,7 @@ function AdminFooter() {
 
             <Box sx={{ display: "flex", alignItems: "center", gap: 1, mb: 2 }}>
               <EmailIcon fontSize="small" />
-              <Typography variant="body2">hello@libraryhub.example</Typography>
+              <Typography variant="body2">hello@libib.example</Typography>
             </Box>
 
             <Typography variant="body2" sx={{ mb: 1 }}>
@@ -181,7 +181,7 @@ function AdminFooter() {
         {/* bottom bar */}
         <Box sx={{ borderTop: "1px solid rgba(255,255,255,0.08)", mt: 4, pt: 3, display: "flex", flexDirection: { xs: "column", sm: "row" }, justifyContent: "space-between", alignItems: "center", gap: 2 }}>
           <Typography variant="caption" sx={{ color: "rgba(243, 238, 237, 1)" }}>
-            © {new Date().getFullYear()} Library Hub — Small library management made beautiful.
+            © {new Date().getFullYear()} Libib — Small library management made beautiful.
           </Typography>
 
           <Box>

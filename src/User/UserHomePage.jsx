@@ -55,7 +55,7 @@ export default function UserHomePage() {
               />
      */}
               <Typography variant="h2" component="h1" sx={{ fontWeight: 800, mb: 2 }}>
-                Welcome to Library Hub
+                Welcome to Libib
               </Typography>
     
               <Typography variant="h6" color="text.secondary" sx={{ mb: 4 }}>
@@ -73,11 +73,11 @@ export default function UserHomePage() {
                 <Grid container spacing={3} alignItems="center">
                   <Grid item xs={12} md={6}>
                     <Typography variant="h4" sx={{ fontWeight: 700, mb: 1 }}>
-                      About Library Hub
+                      About Libib
                     </Typography>
     
                     <Typography variant="body1" color="text.secondary" paragraph>
-                      Library Hub is built for small collections and local libraries. It focuses on core tasks — cataloging, lending,
+                      Libib is built for small collections and local libraries. It focuses on core tasks — cataloging, lending,
                       and quick lookups — while keeping the interface clean and pleasant for users and staff.
                     </Typography>
     

@@ -10,6 +10,7 @@ import AdminBookAdd from './Admin/AdminBookAdd'
 import UserHomePage from './User/UserHomePage'
 import UserBookDetails from './User/UserBookDetails'
 import PageNotFound from './pages/PageNotFound'
+import RegisterPage from './pages/RegisterPage'
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
     <>
       <Routes>
         <Route path='/' element={<Login />} />
+        <Route path='/register' element={<RegisterPage />} />
         <Route path='/adminhome' element={<AdminHome />} />
         <Route path='/adduser' element={<AdminAddUser />} />
         <Route path='/adminview' element={<AdminViewUser />} />

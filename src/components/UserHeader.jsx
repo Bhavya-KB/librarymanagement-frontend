@@ -90,7 +90,7 @@ export default function UserHeader({
                         </IconButton>
             {/* </Box> */}
             <Typography variant="h6" sx={{ fontWeight: 800 }}>
-               Library Hub
+               Libib
             </Typography>
           </Box>
 

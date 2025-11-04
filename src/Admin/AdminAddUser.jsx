@@ -14,7 +14,8 @@ function AdminAddUser() {
     bookName: "",
     bookNumber: "",
     takenDate: "",
-    returnDate: ""
+    returnDate: "",
+    imgUrl:""
   })
 
   const navigate = useNavigate()
@@ -23,9 +24,9 @@ function AdminAddUser() {
   const adduser = async (e) => {
     e.preventDefault(); 
 
-    const { userId, userName, bookName, bookNumber, takenDate, returnDate } = userInput;
+    const { userId, userName, bookName, bookNumber, takenDate, returnDate,imgUrl } = userInput;
 
-    if (userId && userName && bookName && bookNumber && takenDate && returnDate) {
+    if (userId && userName && bookName && bookNumber && takenDate && returnDate && imgUrl) {
       try {
         const result = await addUserAPI(userInput);
         console.log('User Details added:', result.data || result);
@@ -44,7 +45,8 @@ function AdminAddUser() {
           bookName: "",
           bookNumber: "",
           takenDate: "",
-          returnDate: ""
+          returnDate: "",
+          imgUrl:""
         });
         
       setTimeout(() => {
@@ -88,7 +90,8 @@ function AdminAddUser() {
         <Box
           sx={{
             backgroundColor: 'rgba(255, 255, 255, 0.9)',
-            padding: 4,
+            padding: 1,
+            paddingX:4,
             borderRadius: 3,
             width: { xs: '90%', sm: '70%', md: '50%' },
             boxShadow: 6,
@@ -166,6 +169,17 @@ function AdminAddUser() {
               onChange={(e) => setUserInput({ ...userInput, returnDate: e.target.value })}
             />
 
+               {/* ✅ Added Image URL Field */}
+            <TextField
+              label="Image URL"
+              name="imageUrl"
+              fullWidth
+              required
+              sx={{ mb: 2 }}
+              value={userInput.imgUrl}
+              onChange={(e) => setUserInput({ ...userInput, imgUrl: e.target.value })}
+            />
+
             <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 2 }}>
               <Button
                 variant="contained"
@@ -179,7 +193,8 @@ function AdminAddUser() {
                   bookName: "",
                   bookNumber: "",
                   takenDate: "",
-                  returnDate: ""
+                  returnDate: "",
+                  imgUrl:""
                 })}
               >
                 Cancel
