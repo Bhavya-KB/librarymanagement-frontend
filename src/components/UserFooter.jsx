@@ -21,6 +21,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import MenuBookIcon from '@mui/icons-material/MenuBook';
 
 
 function scrollToId(id) {
@@ -34,7 +35,7 @@ export default function UserFooter() {
     <Box
       component="footer"
       sx={{
-        width: "100%",                // full width
+        width: "100%",                
         position: "relative",
         left: 0,
         right: 0,
@@ -51,7 +52,7 @@ export default function UserFooter() {
         sx={{
           maxWidth: "1600px",                // control content width if you want
           mx: "auto",                        // center content horizontally
-          px: { xs: 2, sm: 4, md: 8 },       // internal padding (no side gaps outside bg)
+          px: { xs: 2, sm: 4, md: 8 },      
           boxSizing: "border-box",
         }}
       >
@@ -68,7 +69,7 @@ export default function UserFooter() {
           {/* Summary */}
           <Box sx={{ flex: "1 1 33%", minWidth: 240 }}>
             <Box sx={{ display: "flex", gap: 2, alignItems: "flex-start" }}>
-              <Box
+              {/* <Box
                 sx={{
                   width: 64,
                   height: 64,
@@ -81,7 +82,11 @@ export default function UserFooter() {
                 }}
               >
                 <BookIcon sx={{ fontSize: 34, color: "secondary.main" }} />
-              </Box>
+              </Box> */}
+
+              <IconButton edge="start" color="inherit" aria-label="logo">
+                          <MenuBookIcon sx={{ fontSize: 35 }} />
+                        </IconButton>
 
               <Box>
                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 1 }}>
