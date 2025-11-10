@@ -13,6 +13,7 @@ import {
 import UserHeader from "../components/UserHeader";
 import UserFooter from "../components/UserFooter";
 import { getAllUsersAPI } from "../service/allAPI";
+import UserDetailsHeader from "../components/UserDetailsHeader";
 
 export default function UserBookDetails() {
   const [bookDetails, setBookDetails] = useState([]);
@@ -22,18 +23,35 @@ export default function UserBookDetails() {
   const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
 
   // Fetch all borrowed books (admin collection)
+
   const fetchBookDetails = async () => {
-    try {
-      const result = await getAllUsersAPI(); // this calls /admin
-      if (result.data) {
-        setBookDetails(result.data);
-      }
-    } catch (error) {
-      console.error("Error fetching books:", error);
-    } finally {
-      setLoading(false);
+  try {
+    const result = await getAllUsersAPI(); // fetch all
+    if (result.data) {
+      // ✅ Show only the logged-in user's books
+      const userSpecificBooks = result.data.filter(
+        (book) => book.email === loggedInUser?.email
+      );
+      setBookDetails(userSpecificBooks);
     }
-  };
+  } catch (error) {
+    console.error("Error fetching books:", error);
+  } finally {
+    setLoading(false);
+  }
+};
+  // const fetchBookDetails = async () => {
+  //   try {
+  //     const result = await getAllUsersAPI(); // this calls /admin
+  //     if (result.data) {
+  //       setBookDetails(result.data);
+  //     }
+  //   } catch (error) {
+  //     console.error("Error fetching books:", error);
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
 
   useEffect(() => {
     fetchBookDetails();
@@ -55,7 +73,9 @@ export default function UserBookDetails() {
 
   return (
     <>
-      <UserHeader />
+      {/* <UserHeader /> */}
+
+      <UserDetailsHeader/>
 
       <Box
         sx={{
